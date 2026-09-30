@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="description" content="Discover musical instruments and accessories at OLEMOLLEL ONLINE SHOPPING. Find your sound and ask us about current stock and prices on WhatsApp.">
+  <title>OLEMOLLEL — Find your sound</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> A home for the sound you’re looking for <span class="announcement-divider">·</span> Côte d’Ivoire</div>
+  <header class="site-header" id="top">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="OLEMOLLEL home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 29h6l5-14 9 25 6-19 4 8h3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="29" r="2" fill="currentColor"/><circle cx="40" cy="29" r="2" fill="currentColor"/></svg></span>
+        <span class="brand-copy"><strong>OLE<span>MOLLEL</span></strong><small>ONLINE SHOPPING</small></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">Our story</a><a href="#care">Customer care</a>
+      </nav>
+      <div class="header-tools">
+        <label class="search-box" aria-label="Search instruments"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4 4"/></svg><input id="header-search" type="search" placeholder="Find your sound" autocomplete="off"><kbd>/</kbd></label>
+        <button class="icon-button theme-button" id="theme-toggle" aria-label="Switch to dark mode" title="Switch appearance"><span class="theme-icon" aria-hidden="true">☾</span></button>
+        <button class="icon-button account-button" id="account-open" aria-label="Account" title="Your account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.5 3.1-5.3 7-5.3s6.2 1.8 7 5.3"/></svg></button>
+        <button class="icon-button wishlist-button" id="wishlist-open" aria-label="Wishlist" title="Your wishlist"><span aria-hidden="true">♡</span><span class="count-badge" id="wishlist-count">0</span></button>
+        <button class="icon-button cart-button" id="cart-open" aria-label="Shopping bag, 0 items" title="Shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="count-badge" id="cart-count">0</span></button>
+        <button class="menu-button" id="menu-toggle" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="quick-category-bar" aria-label="Shop by category"><div class="shell quick-category-inner"><span class="quick-category-label">Shop by</span><div class="quick-category-list" id="quick-categories"></div></div></nav>
+
+  <main>
+    <section class="shop-section section-block" id="shop">
+      <div class="shell">
+        <div class="section-heading shop-heading"><div><p class="eyebrow">Find your next favourite</p><h2>Instruments & <em>more</em></h2><p class="muted section-subtitle">A considered collection for the notes you haven’t played yet.</p></div><div class="shop-side-note"><span class="side-note-line"></span><span>Ask us about current<br>price & availability</span></div></div>
+        <div class="shop-controls">
+          <div class="filter-row" id="filter-row" aria-label="Filter products by category"></div>
+          <div class="sort-tools"><label class="price-filter"><span>Up to</span><select id="price-filter" aria-label="Maximum price"><option value="all">Any price</option><option value="250000">250,000 TZS</option><option value="500000">500,000 TZS</option><option value="1000000">1,000,000 TZS</option><option value="3000000">3,000,000 TZS</option></select></label><label class="sort-select"><span>Sort by</span><select id="sort-select" aria-label="Sort products"><option value="featured">Curated for you</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="new">New arrivals</option><option value="bestseller">Best sellers</option></select></label></div>
+        </div>
+        <div class="search-feedback" id="search-feedback" aria-live="polite" hidden></div>
+        <div class="product-grid" id="product-grid"><div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div></div>
+        <div class="catalog-load-more-wrap"><button class="button button-outline catalog-load-more" id="load-more-products" type="button" hidden>Show more products</button></div>
+        <p class="catalog-note"><span>✳</span> Representative instrument photos and sample prices. Please confirm the exact model, price and availability with us.</p>
+      </div>
+    </section>
+
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule"></span> Made for the music in you</p>
+        <h1 id="hero-title">Your Music.<br>Your Sound.<br><em>Your Instrument.</em></h1>
+        <p class="hero-description">Discover quality musical instruments and accessories at OLEMOLLEL ONLINE SHOPPING.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#shop">Browse all products <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Contact us</a></div>
+        <div class="hero-footnote"><span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>Find the next note in your story</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-wrap"><img class="hero-image" src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1500&q=90" alt="Warmly lit acoustic guitar in a music studio"><span class="hero-image-wash"></span></div>
+        <div class="hero-note"><span class="note-icon">♪</span><div><strong>Make room for music</strong><small>Instruments for every next step</small></div><span class="note-arrow">↗</span></div>
+        <div class="hero-stamp" aria-label="Curated for musicians"><span>CURATED<br>FOR MUSIC</span><svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="stamp-circle" d="M50 50m-35 0a35 35 0 1 1 70 0a35 35 0 1 1-70 0"/></defs><text><textPath href="#stamp-circle">· OLEMOLLEL · MUSIC · OLEMOLLEL ·</textPath></text></svg></div>
+      </div>
+      <div class="hero-vertical-label">INSTRUMENTS · SOUND · POSSIBILITY</div>
+    </section>
+
+    <section class="category-section shell section-block" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">A sound for every style</p><h2>Explore by <em>instrument</em></h2></div><a class="text-link" href="#shop">See everything <span>↗</span></a></div>
+      <div class="category-grid" id="category-grid"><div class="skeleton skeleton-category"></div><div class="skeleton skeleton-category"></div><div class="skeleton skeleton-category"></div><div class="skeleton skeleton-category"></div></div>
+    </section>
+
+    <section class="story-band section-block">
+      <div class="shell story-band-inner"><span class="story-mark">“</span><p>Every instrument holds a little possibility.<br><em>Let’s find yours.</em></p><a href="#contact" class="round-arrow" aria-label="Contact us">↗</a><span class="story-band-label">THE OLEMOLLEL WAY</span></div>
+    </section>
+
+    <section class="recent-section shell section-block" id="recent-section" hidden><div class="section-heading compact-heading"><div><p class="eyebrow">Keep exploring</p><h2>Recently <em>viewed</em></h2></div><button class="text-link-button" id="clear-recent">Clear history</button></div><div class="product-grid recent-grid" id="recent-grid"></div></section>
+
+    <section class="about-section shell section-block" id="about">
+      <div class="about-image"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1100&q=85" alt="Musician’s instrument and recording equipment"><div class="about-image-caption"><span>OUR PURPOSE</span><strong>More music,<br>closer to home.</strong></div></div>
+      <div class="about-copy"><p class="eyebrow"><span class="eyebrow-rule"></span> A little about us</p><h2>A good instrument<br>changes <em>everything.</em></h2><p>OLEMOLLEL ONLINE SHOPPING brings musical instruments and thoughtful accessories closer to the people who play, learn, create and listen.</p><p>We believe finding the right instrument should feel inspiring and straightforward. Ask us what’s available, share what you have in mind, and let’s make a confident choice together.</p><div class="promise-list"><div><span class="promise-number">01</span><span><strong>Made for your music</strong><small>Guidance for every stage and style.</small></span></div><div><span class="promise-number">02</span><span><strong>Clear from the start</strong><small>We confirm the current price and stock with you.</small></span></div><div><span class="promise-number">03</span><span><strong>Here when you need us</strong><small>Direct, friendly support from our team.</small></span></div></div><a class="text-link" href="#contact">Get to know us <span>↗</span></a></div>
+    </section>
+
+    <section class="care-section section-block" id="care"><div class="shell care-inner"><div class="care-intro"><p class="eyebrow">A human on the other end</p><h2>Good music.<br><em>Good support.</em></h2><p>Need a recommendation, have a product question, or want help with an order? We’re easy to reach.</p><a class="button button-light" href="#contact">Talk to our team <span>↗</span></a><span class="care-orbit orbit-one"></span><span class="care-orbit orbit-two"></span></div><div class="care-cards"><a href="" class="care-card" data-contact="whatsapp"><span class="care-icon whatsapp-icon">◉</span><span><strong>WhatsApp support</strong><small>Quick help and product advice</small></span><span class="care-arrow">↗</span></a><a href="" class="care-card" data-contact="call"><span class="care-icon">⌕</span><span><strong>Call our team</strong><small>Speak with us directly</small></span><span class="care-arrow">↗</span></a><a href="" class="care-card" data-contact="email"><span class="care-icon">✉</span><span><strong>Email support</strong><small id="email-support-caption">Ask for our email by WhatsApp</small></span><span class="care-arrow">↗</span></a><a href="#faq" class="care-card"><span class="care-icon">?</span><span><strong>Helpful answers</strong><small>Order, stock and returns</small></span><span class="care-arrow">↗</span></a><div class="business-hours"><span class="open-indicator"></span><span><strong>Here to help, Monday–Saturday</strong><small id="business-hours">9:00–18:00 GMT · Côte d’Ivoire</small></span></div></div></div></section>
+
+    <section class="faq-section shell section-block" id="faq"><div class="faq-intro"><p class="eyebrow">Before you reach out</p><h2>Good to <em>know.</em></h2><p>Some quick answers to help you get started.</p><a class="text-link" href="#contact">Still have a question? <span>↗</span></a></div><div class="faq-list" id="faq-list"></div></section>
+
+    <section class="contact-section shell" id="contact"><div class="contact-card"><div><p class="eyebrow">Let’s talk instruments</p><h2>Your next sound is<br>just a <em>conversation away.</em></h2><p>Tell us what you’re looking for. We’ll help you check what’s available and find the right fit.</p><div class="contact-details"><a href="" id="contact-wa"><span class="contact-symbol">◉</span> WhatsApp <span class="contact-value" id="contact-number">+225 767 777 778</span><span class="contact-arrow">↗</span></a><a href="" id="contact-tel"><span class="contact-symbol">⌕</span> Call us <span class="contact-value" id="contact-call-number">+225 767 777 778</span><span class="contact-arrow">↗</span></a></div></div><div class="contact-scribble" aria-hidden="true"><svg viewBox="0 0 260 190" fill="none"><path d="M28 113C56 35 108 34 110 87s-41 75-47 34 25-86 65-59 2 103 39 97 32-58 27-87 25-45 43-14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="28" cy="113" r="3" fill="currentColor"/><circle cx="236" cy="58" r="3" fill="currentColor"/></svg><span>Let’s make<br>something good.</span></div><span class="contact-card-watermark">OLE</span></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-main"><div class="footer-brand-block"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 29h6l5-14 9 25 6-19 4 8h3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-copy"><strong>OLE<span>MOLLEL</span></strong><small>ONLINE SHOPPING</small></span></a><p>A home for the music<br>you haven’t made yet.</p><a class="footer-owner" id="owner-tools" href="#">Owner sign in <span>↗</span></a></div><div class="footer-links"><strong>Explore</strong><a href="#top">Home</a><a href="#shop">Shop instruments</a><a href="#categories">Categories</a><a href="#about">Our story</a></div><div class="footer-links"><strong>Here to help</strong><a href="#care">Customer care</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="footer-contact"><strong>Say hello</strong><span>We’re happy to help you find your sound.</span><a href="" id="footer-whatsapp">WhatsApp <span id="footer-phone">+225 767 777 778</span> ↗</a><small>Monday–Saturday<br>9:00–18:00 GMT</small></div></div><div class="shell footer-bottom"><span>© <span id="year"></span> OLEMOLLEL ONLINE SHOPPING</span><span>Instruments · Sound · Possibility</span><button id="back-top" aria-label="Back to top">↑</button></div></footer>
+
+  <button class="care-float" id="care-float" aria-expanded="false"><span class="float-spark">✳</span><span>Customer care</span><span class="care-float-chevron">⌃</span></button>
+  <div class="care-popover" id="care-popover" hidden><div class="popover-head"><span>How can we help?</span><button class="close-small" id="care-close" aria-label="Close">×</button></div><a href="" data-contact="whatsapp"><span>◉</span> WhatsApp support <b>↗</b></a><a href="" data-contact="call"><span>⌕</span> Call our team <b>↗</b></a><a href="" data-contact="email"><span>✉</span> Email support <b>↗</b></a><a href="#faq" id="popover-faq"><span>?</span> Frequently asked questions <b>↗</b></a><button class="care-account-link" id="care-account"><span>♙</span> Your account <b>↗</b></button></div>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cart-drawer" aria-hidden="true" aria-labelledby="cart-title"><div class="drawer-head"><div><p class="eyebrow">Your selection</p><h2 id="cart-title">Shopping bag <span id="cart-title-count"></span></h2></div><button class="close-button" data-close aria-label="Close bag">×</button></div><div class="drawer-content" id="cart-content"></div><div class="drawer-foot" id="cart-footer"></div></aside>
+  <aside class="drawer" id="wishlist-drawer" aria-hidden="true" aria-labelledby="wishlist-title"><div class="drawer-head"><div><p class="eyebrow">Keep what you love</p><h2 id="wishlist-title">Your wishlist <span id="wishlist-title-count"></span></h2></div><button class="close-button" data-close aria-label="Close wishlist">×</button></div><div class="drawer-content" id="wishlist-content"></div></aside>
+  <aside class="drawer" id="compare-drawer" aria-hidden="true" aria-labelledby="compare-title"><div class="drawer-head"><div><p class="eyebrow">Side by side</p><h2 id="compare-title">Compare instruments</h2></div><button class="close-button" data-close aria-label="Close comparison">×</button></div><div class="drawer-content" id="compare-content"></div></aside>
+  <div class="modal-shell" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details" hidden><button class="modal-close" data-close aria-label="Close details">×</button><div class="modal-body" id="product-modal-body"></div></div>
+  <div class="modal-shell form-modal" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-modal-title" hidden><button class="modal-close" data-close aria-label="Close account">×</button><div class="modal-body" id="account-modal-body"></div></div>
+  <div class="modal-shell form-modal admin-modal" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title" hidden><button class="modal-close" data-close aria-label="Close owner dashboard">×</button><div class="modal-body" id="admin-modal-body"></div></div>
+  <div class="modal-shell form-modal checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" hidden><button class="modal-close" data-close aria-label="Close order form">×</button><div class="modal-body" id="checkout-modal-body"></div></div>
+  <div class="compare-chip" id="compare-chip" hidden><span id="compare-chip-count">0</span> selected <button id="compare-show">Compare</button><button id="compare-clear" aria-label="Clear comparison">×</button></div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
